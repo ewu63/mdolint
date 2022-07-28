@@ -1,0 +1,68 @@
+extends: substitution
+message: Consider using '%s' instead of '%s'
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  # of the: instead of "x of the y" try "y x" or "y's x"
+  can do: replace "can do" with "does"
+  # can be: replace "can be" with "is"
+  in order to: replace "in order to" with "to"
+  makes use of: replace "makes use of" with "uses"
+  it should be noted: replace "It should be noted" with "note" or eliminate altogether
+  as can be seen in: replace "As can be seen in" with "As shown in"
+  # simpler word
+  "necessitate[ds]?": Should be "require"
+  #utilize[ds]?: Should be "use(s/d)"
+  effectuate: Should be "cause"
+  not able: Should be "unable"
+  not be able: Should be "be unable"
+  have to: Should be "must"
+  shortly: Should be "soon"
+  excepting: Should be "except"
+  # Wordy
+  consensus of opinion: Should be "consensus"
+  considerable amount of: Should be "much"
+  considerable number of: Should be "many"
+  count the number of: Should be "count"
+  decreased amount of: Should be "less"
+  decreased number of: Should be "fewer"
+  situations? in which: Should be "when"
+  small numbers? of: Should be "a few"
+  'on an? \b[^ ]*\b basis': Too many words (i.e. "on a monthly basis" -> "monthly")
+  few in numbers?: Should be "few"
+  fewer in number: Should be "fewer"
+  for the reason that: Should be "because"
+  great deal of: Should be "much"
+  in a satisfactory manner: Should be "satisfactorily"
+  what is the explanation of: Should be "why"
+  will be significantly different: Should be "will differ significantly"
+  within the realm of possibility: Should be "possible"
+  "amount of times?": Should be "duration(s)"
+  an example of this is the fact that: Should be "for example"
+  "are of the same opinions?": Should be "agree"
+  "based on the facts?": Should be "because"
+  "because of the facts?": Should be "because"
+  by means of: Should be "by" or "with"
+  # redundant
+  up until: Should be "until"
+  still remain: Should be "remain"
+  reason why: Redundant
+  definitely proved: Should be "proved"
+  different varieties: Should be "varieties"
+  enclosed herewith: Should be "enclosed"
+  entirely eliminate: Should be "eliminate"
+  eradicate completely: Should be "eradicate"
+  'for \\(?:eg|e.g.)': The 'for' is redundant
+  grows? larger: Should be "grow(s)"
+  whether or not: Should be "whether"
+  absolutely essential: Should be "essential"
+  completely surrounded: Should be "surrounded"
+  connected together: Should be "connected"
+  grouped together: Should be "grouped"
+  all of: Should be "all"
+  'and \\etc': "'Et' already means 'and'"
+  # unnecessary
+  that being aid: Should be removed
+  in fact: Should rarely be used
+  clearly: Should rarely be used

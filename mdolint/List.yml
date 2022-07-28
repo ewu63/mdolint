@@ -1,0 +1,6 @@
+extends: existence
+message: "Use capital letters for list items"
+ignorecase: false
+level: warning
+raw:
+  - \\item(\[.*?\])?\s+([[:lower:]])

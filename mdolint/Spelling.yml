@@ -1,0 +1,22 @@
+extends: substitution
+message: Consider using '%s' instead of '%s'
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  # field specific terms
+  aero-structural: aerostructural
+  aero-propulsive: aeropropulsive
+  aero-thermal: aerothermal
+  # common misspellings
+  foot print: footprint
+  develope[^d]: develop
+  further\smore: furthermore
+  e-mail: email
+  data set: dataset
+  meta data: metadata
+  meta model: metamodel
+  meta models: metamodels
+  open source: open-source
+  run-time: runtime
+  run time: runtime

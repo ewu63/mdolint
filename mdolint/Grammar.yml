@@ -1,0 +1,21 @@
+extends: substitution
+message: Consider using '%s' instead of '%s'
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  "(?:However|Therefore|Furthermore)[^,]": comma needed after introductory word
+  "(?<!and )thus[^,]": add comma after intro word "thus" or a "and" before connecting indep. clauses "thus"
+  'the the\s': remove second "the"
+  can not: Should be "cannot"
+  "comprise[ds] of": Should be "composed of"
+  'includ(?:es|ing)[^\.]*?etc.?': Including implies an incomplete list, so don't double up with an etc.
+  "including:": Including leads directly into lists without semi-colons. Semi-colon lists should come after nouns
+  lead to: Should be "leads to" or "led to"
+  literally like: Literally means not a simile
+  loosing: Should be "losing", use "loosening" otherwise.
+  loss off: Should be "loss of"
+  safe guard: Should be "safeguard"
+  thusly: Should be "thus"
+  firstly: Should be "first"
+  data is: data are

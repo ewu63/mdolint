@@ -1,0 +1,12 @@
+extends: substitution
+message: "%s"
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  principal: likely should be "principle"
+  '\sfo\s': likely should be "of"
+  insure: likely should be "ensure"
+  '(?<!to)(?<!at)(?<!in)(?<!,)\swhich': May need a comma between which and noun or should be that
+  trivial: likely should be "easy". trivial means not important
+  "calculates?": likely should be "compute(s)". "Caclulate(s)" refers to arithmetic.

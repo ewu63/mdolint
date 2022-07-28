@@ -1,0 +1,32 @@
+#Avoid "weasel words": These are words that do not convey information and are not precise.
+extends: existence
+message: Consider removing '%s'
+level: warning
+ignorecase: true
+tokens:
+  - many
+  - various
+  - very
+  - fairly
+  - several
+  - extremely
+  - exceedingly
+  - quite
+  - remarkably
+  - few
+  - surprisingly
+  - mostly
+  - largely
+  - huge
+  - tiny
+  - (?:are|is)\sa\snumber
+  - excellent
+  - interestingly
+  - significantly
+  - substantially
+  - vast
+  - relatively
+  - completely
+  - some\skind
+  - stuff
+  - things

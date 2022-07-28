@@ -1,0 +1,20 @@
+extends: substitution
+message: "%s"
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  and/or: use x, y, or both.
+  tackles: Should be "solve or address"
+  kinda: Should be "kind of"
+  ain't: remove contraction also not a word
+  # I, you, he, she, it , we , they , that , who, what , when , where, why, how contractions
+  I'm: remove Contraction
+  "(?:i|you|he|she|it|we|they|that|who|what|where|when|why|how)'ll": remove Contraction
+  "(?:i|you|he|she|it|we|they|that|who|what|where|when|why|how)'d": remove Contraction
+  "(?:i|you|we|they)'ve": remove Contraction
+  "(?:you|we|they|what)'re": remove Contraction
+  "(?:he|she|it|that|who|what|where|when|why|how)'s": remove Contraction
+  # verb contractions
+  "(?:is|are|was|were|have|has|had|wo|would|do|does|did|ca|could|should|might|must)n't": remove Contraction
+  "(?:would|should|could|might|must)'ve": remove Contraction

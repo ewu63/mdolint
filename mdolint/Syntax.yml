@@ -1,0 +1,18 @@
+extends: substitution
+message: Consider using '%s' instead of '%s'
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  ## Syntax Errors
+  #\\caption\[.*?CCDF.*?\]                            % Syntax: short caption should not include graph type.
+  #\\caption\[.*?CDF.*?\]                             % Syntax: short caption should not include graph type.
+  #\\caption\[.{0,20}\]                               % Syntax: short caption should not be too short.
+  #\\caption\[[^\]]*[^\.]\]                           % Syntax: short caption should end with a period.
+  '[^~]\\cite[^t]': add ~ to prevent a line break before the number
+  '[^~]\\ref': add ~ to prevent a line break before the number
+  '(?:\\etal{|\\etal[^{]|et\sal)': use \citet{} to add the Author names
+  '^(?:\\num{|\\qty{)[\d.][Ee][-\d]': use \times 10^x instead of 1ex or 1Ex # broken
+  "[xyz]-axis": use the math symbol. e.g. x-axis → the $x$-axis
+  '(?:\\\(?:\\frac{|$\\frac{)': Do not use \frac{} inline.
+  "(?:Navier-Stokes|Gauss-Seidel|Newton-Krylov)": use -- to get the right dash

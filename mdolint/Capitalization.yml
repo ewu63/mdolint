@@ -1,0 +1,25 @@
+extends: substitution
+message: Consider using '%s' instead of '%s'
+level: warning
+ignorecase: false
+# swap maps tokens in form of bad: good
+swap:
+  # Only the Capitalization tag matches case-sensitively
+  \\(?:sub)*section\{[a-z].*?\}: Section titles should be capitalized
+  \\(?:sub)+section\{\w[^}]*?[^:]\b(?:With|A|An|Is|And|For|To|The)\b[^}]*?\}: Some words should't be capitalized in section titles
+  section~\\ref: capitalize section when saying Section X.
+  # proper names
+  linux: Linux
+  python: Python
+  newton: the name Newton (except when used as unit)
+  jacobi: the name Jacobi
+  gauss: the name Gauss
+  riemann: the name Riemann
+  newtonian: Newtonian
+  jacobian: Jacobian
+  euclidean: Euclidean
+  eulerian: Eulerian
+  lagrangian: Lagrangian
+  # lab codes
+  (?:adflow|Adflow|ADFlow|ADFLOW|adFlow): ADflow
+  (?:TACs|Tacs|tacs): TACS
