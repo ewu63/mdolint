@@ -2,9 +2,17 @@
 This is a Vale plugin for linting MDO Lab publications.
 
 ## Installation
-Just clone this somewhere on your computer. For VS Code integration, put the following in your config file.
+First install [the Vale plugin](https://marketplace.visualstudio.com/items?itemName=errata-ai.vale-server) in VS Code.
+
+Then clone this somewhere on your computer and put the following in your config file.
 ```
-"vale.core.useCLI": true,
 "vale.valeCLI.config": "<path-to-vale.ini>",
 "vale.valeCLI.path": "<path-to-vale-exe>",
 ```
+
+## Usage
+The default configuration file (`.vale.ini`) also includes some settings for other Vale plugins. Those can be installed from the following locations (typically just by cloning the files to this root directory). You can also comment out those entries if you do not want them activated.
+
+- [proselint](https://github.com/errata-ai/proselint)
+- [Microsoft](https://github.com/errata-ai/Microsoft)
+- [write-good](https://github.com/errata-ai/write-good)
