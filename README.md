@@ -2,7 +2,7 @@
 This is a Vale plugin for linting MDO Lab publications.
 
 ## Installation
-First install [the Vale plugin](https://marketplace.visualstudio.com/items?itemName=errata-ai.vale-server) in VS Code.
+First install [Vale](https://vale.sh/docs/vale-cli/installation/) and the [Vale plugin for VS Code](https://marketplace.visualstudio.com/items?itemName=errata-ai.vale-server).
 
 Then clone this somewhere on your computer and put the following in your config file.
 ```
